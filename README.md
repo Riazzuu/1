@@ -1,9 +1,9 @@
-
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بازی الگوی اشکال</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @font-face {
             font-family: 'Vazir';
@@ -16,6 +16,23 @@
             font-style: normal;
         }
         
+        /* مخفی کردن نام ریپوزیتوری و عناصر گیتهاب */
+        .header, .repository-content, .file-navigation, 
+        .gh-header, .AppHeader, .Layout-sidebar,
+        .footer, .mt-6, .Layout-main .container-lg {
+            display: none !important;
+        }
+        
+        /* نمایش فقط محتوای اصلی */
+        .Layout-main, body {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        /* استایل‌های اصلی بازی */
         body {
             font-family: 'Vazir', sans-serif;
             direction: rtl;
@@ -24,6 +41,9 @@
             margin: 0;
             padding: 20px;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         .container {
@@ -33,6 +53,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1;
         }
         
         .game-logo {
@@ -178,6 +199,58 @@
             border-radius: 10px;
         }
         
+        /* استایل برای آیکون‌های شبکه‌های اجتماعی */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            padding: 20px 0;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        
+        .social-icon i {
+            font-size: 24px;
+        }
+        
+        .blog-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .blog-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        
+        .blog-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
         /* طراحی واکنش‌گرا برای موبایل */
         @media (max-width: 600px) {
             .container {
@@ -204,6 +277,19 @@
             .check-btn, .reset-btn {
                 padding: 10px 20px;
                 font-size: 14px;
+            }
+            
+            .social-icons {
+                gap: 15px;
+            }
+            
+            .social-icon, .blog-icon {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .social-icon i {
+                font-size: 20px;
             }
         }
     </style>
@@ -340,6 +426,22 @@
             <div style="margin-top: 20px;">
                 <button class="reset-btn" onclick="resetGame()">شروع مجدد بازی</button>
             </div>
+        </div>
+        
+        <!-- آیکون‌های شبکه‌های اجتماعی -->
+        <div class="social-icons">
+            <a href="https://www.aparat.com/Riazzuu" class="social-icon" target="_blank" title="آپارات">
+                <i class="fas fa-video"></i>
+            </a>
+            <a href="https://www.instagram.com/Riazzuu/" class="social-icon" target="_blank" title="اینستاگرام">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@Riazzuu" class="social-icon" target="_blank" title="یوتیوب">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://riazzuu.blogfa.com/" class="blog-icon" target="_blank" title="وبلاگ">
+                <img src="https://raw.githubusercontent.com/Riazzuu/logo/main/riazzuulogo.jpg" alt="وبلاگ">
+            </a>
         </div>
     </div>
 
