@@ -3,7 +3,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بازی الگوی اشکال</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @font-face {
             font-family: 'Vazir';
@@ -208,44 +207,25 @@
             padding: 20px 0;
         }
         
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        
-        .social-icon:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-        }
-        
-        .social-icon i {
-            font-size: 24px;
-        }
-        
-        .blog-icon {
+        .custom-icon {
             width: 50px;
             height: 50px;
             border-radius: 50%;
             overflow: hidden;
             transition: all 0.3s ease;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
         }
         
-        .blog-icon:hover {
+        .custom-icon:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.3);
         }
         
-        .blog-icon img {
+        .custom-icon img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -283,13 +263,9 @@
                 gap: 15px;
             }
             
-            .social-icon, .blog-icon {
+            .custom-icon {
                 width: 45px;
                 height: 45px;
-            }
-            
-            .social-icon i {
-                font-size: 20px;
             }
         }
     </style>
@@ -430,17 +406,17 @@
         
         <!-- آیکون‌های شبکه‌های اجتماعی -->
         <div class="social-icons">
-            <a href="https://www.aparat.com/Riazzuu" class="social-icon" target="_blank" title="آپارات">
-                <i class="fas fa-video"></i>
+            <a href="https://www.aparat.com/Riazzuu" class="custom-icon" target="_blank" title="آپارات">
+                <img src="https://raw.githubusercontent.com/Riazzuu/logo/main/Aparat.jpg" alt="آپارات">
             </a>
-            <a href="https://www.instagram.com/Riazzuu/" class="social-icon" target="_blank" title="اینستاگرام">
-                <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com/Riazzuu/" class="custom-icon" target="_blank" title="اینستاگرام">
+                <img src="https://raw.githubusercontent.com/Riazzuu/logo/main/Instagram.jpg" alt="اینستاگرام">
             </a>
-            <a href="https://www.youtube.com/@Riazzuu" class="social-icon" target="_blank" title="یوتیوب">
-                <i class="fab fa-youtube"></i>
+            <a href="https://www.youtube.com/@Riazzuu" class="custom-icon" target="_blank" title="یوتیوب">
+                <img src="https://raw.githubusercontent.com/Riazzuu/logo/main/youtube.jpg" alt="یوتیوب">
             </a>
-            <a href="https://riazzuu.blogfa.com/" class="blog-icon" target="_blank" title="وبلاگ">
-                <img src="https://raw.githubusercontent.com/Riazzuu/logo/main/riazzuulogo.jpg" alt="وبلاگ">
+            <a href="https://riazzuu.blogfa.com/" class="custom-icon" target="_blank" title="وبلاگ">
+                <img src="https://raw.githubusercontent.com/Riazzuu/logo/main/Riazzuu.jpg" alt="وبلاگ">
             </a>
         </div>
     </div>
